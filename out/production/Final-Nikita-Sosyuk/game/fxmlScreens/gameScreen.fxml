@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.controllers.GameController">
+
+    <ImageView fx:id="imageViewOne" fitHeight="100" fitWidth="100" layoutX="100.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="imageViewTwo" fitHeight="100" fitWidth="100" layoutX="1080" layoutY="100" pickOnBounds="true" preserveRatio="true" />
+    <Label layoutX="135.0" layoutY="200.0" prefWidth="100" text="Me" textAlignment="CENTER">
+        <font>
+            <Font name="Arial" size="20" />
+        </font>
+    </Label>
+    <Label fx:id="labelWarrior" layoutX="1080" layoutY="200" prefWidth="100" textAlignment="CENTER">
+        <font>
+            <Font name="Arial" size="20" />
+        </font>
+    </Label>
+
+    <Label layoutX="128.0" layoutY="245.0" prefWidth="100" text="Figure:" textAlignment="CENTER">
+        <font>
+            <Font name="Arial" size="10" />
+        </font>
+    </Label>
+    <Label layoutX="1110.0" layoutY="245.0" prefWidth="100" text="Figure:" textAlignment="CENTER">
+        <font>
+            <Font name="Arial" size="10" />
+        </font>
+    </Label>
+
+    <Label fx:id="figureMe" layoutX="125.0" layoutY="257.0" prefHeight="39.0" prefWidth="103.0" textAlignment="CENTER">
+        <font>
+            <Font name="Arial" size="35" />
+        </font>
+    </Label>
+    <Label fx:id="figureWarrior" layoutX="1106.0" layoutY="259.0" prefWidth="100" textAlignment="CENTER">
+        <font>
+            <Font name="Arial" size="35.0" />
+        </font>
+    </Label>
+
+    <ComboBox fx:id="emotionBox" layoutX="100.0" layoutY="325.0" prefWidth="100" promptText="Choose" style="-fx-background-color: black; -fx-text-fiill: #ffffff;" stylesheets="@../style/style.css">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Laugh" />
+                <String fx:value="Wicked" />
+                <String fx:value="Wow" />
+                <String fx:value="Misunderstandings" />
+                <String fx:value="default"/>
+            </FXCollections>
+        </items>
+      <opaqueInsets>
+         <Insets top="10.0" />
+      </opaqueInsets>
+    </ComboBox>
+
+    <Button layoutX="100.0" layoutY="362.0" onMouseClicked="#uploadEmotion" prefWidth="100" style="-fx-background-color: grey; -fx-text-fill: #ffffffff;" stylesheets="@../style/style.css" text="Send Emotion" />
+
+    <Line endX="240" endY="240" fill="darkgrey" startX="60" startY="240" strokeWidth="2" />
+    <Line endX="240.0" endY="60" fill="darkgrey" startX="60" startY="60" strokeWidth="2" />
+    <Line endX="240" endY="240" fill="darkgrey" startX="240.0" startY="60.0" strokeWidth="2" />
+    <Line endX="60" endY="240" fill="darkgrey" startX="60" startY="60" strokeWidth="2" />
+    <Line endX="240" endY="300" fill="darkgrey" startX="240" startY="240" strokeWidth="2" />
+    <Line endX="60" endY="300" fill="darkgrey" startX="60" startY="240" strokeWidth="2" />
+    <Line endX="240" endY="300" fill="darkgrey" startX="60" startY="300" strokeWidth="2" />
+
+    <Line endX="1220" endY="240" fill="darkgrey" startX="1040" startY="240" strokeWidth="2" />
+    <Line endX="1220" endY="60" fill="darkgrey" startX="1040" startY="60" strokeWidth="2" />
+    <Line endX="1220" endY="240" fill="darkgrey" startX="1220" startY="60" strokeWidth="2" />
+    <Line endX="1040" endY="240" fill="darkgrey" startX="1040" startY="60" strokeWidth="2" />
+    <Line endX="1220" endY="300" fill="darkgrey" startX="1220" startY="240" strokeWidth="2" />
+    <Line endX="1040" endY="300" fill="darkgrey" startX="1040" startY="240" strokeWidth="2" />
+    <Line endX="1220" endY="300" fill="darkgrey" startX="1040" startY="300" strokeWidth="2" />
+
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="600.0" layoutX="331.0" layoutY="68.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="600.0" layoutX="357.0" layoutY="43.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+   <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#8da0b2" height="23.0" layoutX="87.0" layoutY="455.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: grey;" width="130.0" />
+
+   <Text layoutX="94.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Счёт" textAlignment="CENTER" wrappingWidth="109.0">
+      <font>
+         <Font size="19.0" />
+      </font>
+   </Text>
+
+   <Text fx:id="scoreMe" layoutX="89.0" layoutY="557.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="126.09595489501953">
+      <font>
+         <Font size="59.0" />
+      </font>
+   </Text>
+
+   <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#8da0b2" height="23.0" layoutX="1069.0" layoutY="465.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: grey;" width="130.0" />
+
+   <Text layoutX="1076.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Счёт" textAlignment="CENTER" wrappingWidth="109.0">
+      <font>
+         <Font size="19.0" />
+      </font>
+   </Text>
+
+   <Text fx:id="scoreWarrior" layoutX="1071.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="126.09595489501953">
+      <font>
+         <Font size="59.0" />
+      </font>
+   </Text>
+
+   <Line endX="477.64239501953125" endY="594.8981323242188" fill="darkgrey" layoutX="75.0" layoutY="15.0" startX="477.64239501953125" startY="62.81648254394531" strokeLineCap="ROUND" strokeWidth="5.0" />
+   <Line endX="477.6424560546875" endY="584.4722900390625" fill="darkgrey" layoutX="279.0" layoutY="25.0" startX="477.6424560546875" startY="51.000022888183594" strokeDashOffset="5.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="5.0" />
+   <Line endX="205.37911987304688" endY="212.9485321044922" fill="darkgrey" layoutX="179.0" layoutY="33.0" startX="748.794189453125" startY="212.9485321044922" strokeLineCap="ROUND" strokeWidth="5.0" />
+   <Line endX="205.37911987304688" endY="212.9485321044922" fill="darkgrey" layoutX="180.0" layoutY="233.0" startX="748.794189453125" startY="212.9485321044922" strokeLineCap="ROUND" strokeWidth="5.0" />
+    
+    <StackPane fx:id="stackPane1" layoutX="379.0" layoutY="74.0" prefHeight="167.0" prefWidth="170.0" style="-fx-background-color: white;" />
+    <StackPane fx:id="stackPane2" layoutX="555.0" layoutY="74.0" prefHeight="167.0" prefWidth="199.0" style="-fx-background-color: white;" />
+    <StackPane fx:id="stackPane3" layoutX="761.0" layoutY="66.0" prefHeight="171.0" prefWidth="168.0" style="-fx-background-color: white;" />
+    <StackPane fx:id="stackPane4" layoutX="369.0" layoutY="250.0" prefHeight="192.0" prefWidth="182.0" style="-fx-background-color: white;" />
+    <StackPane fx:id="stackPane5" layoutX="558.0" layoutY="254.0" prefHeight="181.0" prefWidth="192.0" style="-fx-background-color: white;" />
+    <StackPane fx:id="stackPane6" layoutX="759.0" layoutY="249.0" prefHeight="190.0" prefWidth="175.0" style="-fx-background-color: white;" />
+    <StackPane fx:id="stackPane7" layoutX="383.0" layoutY="448.0" prefHeight="166.0" prefWidth="166.0" style="-fx-background-color: white;" />
+    <StackPane fx:id="stackPane8" layoutX="558.0" layoutY="452.0" prefHeight="164.0" prefWidth="192.0" style="-fx-background-color: white;" />
+    <StackPane fx:id="stackPane9" layoutX="759.0" layoutY="447.0" prefHeight="167.0" prefWidth="192.0" style="-fx-background-color: white;" />
+
+   <Text fx:id="myMoveOrNote" layoutX="332.0" layoutY="706.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Who's move" textAlignment="CENTER" wrappingWidth="634.1933288574219">
+      <font>
+         <Font name="Hannotate SC Regular" size="26.0" />
+      </font>
+   </Text>
+
+   <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f2ff005e" height="33.0" layoutX="535.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.1" width="226.0" />
+
+
+   <Text fx:id="figureOrEmotion" fill="#2c2c2e" layoutX="532.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What" textAlignment="CENTER" wrappingWidth="228.64952061948355">
+      <font>
+         <Font name="Hannotate SC Regular" size="18.0" />
+      </font>
+   </Text>
+
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextArea?>
+<GridPane fx:controller="game.controllers.StartController"
+          xmlns:fx="http://javafx.com/fxml" fx:id="root" hgap="10" vgap="10">
+
+    <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+
+    <columnConstraints>
+        <ColumnConstraints minWidth="400" prefWidth="640"
+                           maxWidth="Infinity" halignment="CENTER">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="400" prefWidth="640"
+                           maxWidth="Infinity">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="400" prefWidth="640"
+                           maxWidth="Infinity">
+        </ColumnConstraints>
+    </columnConstraints>
+
+    <Label text="TicTacToe"
+           GridPane.rowIndex="0" GridPane.columnSpan="3"
+           GridPane.rowSpan="1">
+        <font>
+            <Font name="Arial" size="30"/>
+        </font>
+        <GridPane.margin>
+            <Insets top="20"/>
+        </GridPane.margin>
+    </Label>
+
+    <Label  text="by Nikita Sosyuk"
+            GridPane.rowIndex="1" GridPane.columnSpan="3"
+            GridPane.rowSpan="1">
+        <GridPane.margin>
+            <Insets bottom="10"/>
+        </GridPane.margin>
+    </Label>
+
+    <TextField promptText="Write your username" prefWidth="600" fx:id="username"
+               GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.halignment="CENTER"/>
+
+    <Label text="Choose your character:"
+            GridPane.rowIndex="3" GridPane.columnSpan="3"
+            GridPane.rowSpan="1">
+        <font>
+            <Font name="Arial" size="20"/>
+        </font>
+        <GridPane.margin>
+            <Insets top="10"/>
+        </GridPane.margin>
+    </Label>
+
+    <ImageView fx:id="imageViewOne" fitWidth="175" fitHeight="175" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.columnSpan="3" onMouseClicked="#foxHasChosen"/>
+    <ImageView fx:id="imageViewTwo" fitHeight="175" fitWidth="175" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" GridPane.columnSpan="3" onMouseClicked="#dogHasChosen"/>
+
+    <Button text="Play!"
+            onMouseClicked="#playerButtonAction"
+            prefWidth="200"
+            GridPane.rowIndex="7" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+        <font>
+            <Font name="Arial" size="18"/>
+        </font>
+    </Button>
+
+    <TextField fx:id="portField" promptText="Write port" prefWidth="400"
+               GridPane.columnIndex="1" GridPane.rowIndex="8" GridPane.halignment="CENTER"/>
+
+</GridPane>
